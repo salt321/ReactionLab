@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>反应实验室 · Reaction Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dist/main.js" defer></script>
+</head>
+<body>
+  <main class="lab">
+    <header><a class="brand" href="index.html"><span class="brand-mark">↗</span> 反应实验室 <small>REACTION LAB</small></a><span class="tag">专注 · 等待 · 点击</span></header>
+    <section class="intro"><span class="eyebrow">HOW FAST ARE YOU?</span><h1>测一测，你的反应有多快。</h1><p>等红色变成绿色，立刻点击。让每一次反应，都有迹可循。</p></section>
+    <section class="workspace" aria-label="反应速度测试">
+      <div class="toolbar"><label for="count">测试次数 <input id="count" type="number" min="3" max="100" step="1" value="5" required> <span>次 · 3–100</span></label><button id="start" class="start">开始测试 ↗</button></div>
+      <div class="arena"><div class="round" id="round">准备好了吗？</div><button id="target" class="target" data-phase="idle" aria-label="反应测试按钮"><span id="symbol" class="symbol">⌁</span><strong id="target-title">等待开始</strong><span id="target-hint">点击上方「开始测试」</span></button><p id="status" role="status" aria-live="polite">红色时不要点击，变绿后再出手。</p></div>
+      <div class="metrics"><div><span>本轮进度</span><strong id="progress">0 / 5<small>次</small></strong></div><div><span>最近一次</span><strong id="last">—<small>ms</small></strong></div><div><span>平均反应时间</span><strong id="average">—<small>ms</small></strong></div></div>
+    </section>
+    <section class="details"><div><span class="eyebrow">THE RULES</span><h2>快，也要稳。</h2><p>每次随机等待 3–7 秒。提前点击会清空本轮所有成绩，从第 1 次重新开始。切换标签页或离开窗口，也会作废本轮。</p></div><div class="history-panel"><div class="history-heading"><h2>本轮记录</h2><span>毫秒 / ms</span></div><ol id="history"><li class="empty">你的第一条记录，即将诞生。</li></ol></div></section>
+    <footer><span>REACTION LAB / 01</span><span>测量包含设备、屏幕与输入延迟，仅供娱乐参考。</span></footer>
+  </main>
+</body>
+</html>
